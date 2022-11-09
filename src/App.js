@@ -6,6 +6,8 @@ import Owner from "./pages/Owner";
 import Auth from "./components/Owners/Login/Auth";
 import CreateEducator from "./components/Owners/Educators/CreateEducators";
 import ViewEducator from "./components/Owners/Educators/ViewEducator";
+import ViewStudents from "./components/Owners/Students/ViewStudents";
+import CreateStudents from "./components/Owners/Students/CreateStudents";
 // import Auth from "./components/Login/Auth";
 
 // import AboutUs from "./components/About-us/AboutUs";
@@ -45,6 +47,8 @@ function App() {
         <Route path="/admin/login" element={ <Auth/>}/>
         <Route path="/view/educator" element={<ViewEducator/> }/>
         <Route path="/create/educator" element={<CreateEducator/>} />
+        <Route path="/view/students" element={<ViewStudents/> }/>
+        <Route path="/create/students" element={<CreateStudents/> }/>
         {/* <Route path="/update/educator" element={<UpdateEducator/>}/> */}
         {/* <Route path="/learn" element={<Learn/>} />
         <Route path="/stulogin" element={<LoginEducator/>} />

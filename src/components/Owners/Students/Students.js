@@ -1,5 +1,5 @@
 import Card from 'react-bootstrap/Card';
-import './Owner.css'
+import "../../../components/Owners/Owner.css"
 function Student() {
   return (
     <div className='owner'>
@@ -8,9 +8,10 @@ function Student() {
       <Card.Body>
         <Card.Title>Student</Card.Title>
         <div className='links'>
+        <Card.Link href="/view/students" >View</Card.Link>
         <Card.Link href="/create/students" >Create</Card.Link>
-        <Card.Link href="/update/students" >Update</Card.Link>
-        <Card.Link href="/delete/students"  >Delete</Card.Link>
+        {/* <Card.Link href="/update/students" >Update</Card.Link>
+        <Card.Link href="/delete/students"  >Delete</Card.Link> */}
         </div>
       </Card.Body>
     </Card>

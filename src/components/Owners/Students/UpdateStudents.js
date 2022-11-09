@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-//import Login from './Login';
 
-const UpdateEducator = ({ id, onEditEducator}) => {
+const UpdateStudents = ({ id, onEditStudent}) => {
   
-  const [educator, setEducator] = useState({
+  const [student, setStudent] = useState({
     name: "",
     email: "",
     password: "",    
@@ -15,21 +14,21 @@ const UpdateEducator = ({ id, onEditEducator}) => {
     const jwt = JSON.parse(localStorage.getItem("jwt"));
     function handleSubmit(e) {
         e.preventDefault()
-        fetch(`https://virtualschools.herokuapp.com/educators/${id}`, {
+        fetch(`https://virtualschools.herokuapp.com/students/${id}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type":"application/json",
                 Authorization: 'Bearer ' + jwt.jwt
             },
-            body: JSON.stringify(educator)
+            body: JSON.stringify(student)
         })
         .then(res=> res.json())
-        .then(edittedEducator =>onEditEducator(edittedEducator))
+        .then(edittedStudent =>onEditStudent(edittedStudent))
         setShow(()=>!showButton)
     }
 
     function handleChange(e) {        
-      setEducator({ ...educator, [e.target.name]: e.target.value });        
+      setStudent({ ...student, [e.target.name]: e.target.value });        
   }
   return (
     <div>
@@ -39,7 +38,7 @@ const UpdateEducator = ({ id, onEditEducator}) => {
       <form onSubmit={handleSubmit} className="addForm">
 
 <div className="row mb-3">               
-        <label className="col-sm-2">Educator Name:</label>
+        <label className="col-sm-2">Student Name:</label>
         <div className="col-sm-10">
         <input 
           style={{
@@ -53,8 +52,8 @@ const UpdateEducator = ({ id, onEditEducator}) => {
             boxSizing: "border-box",
             fontSize: "14px"}}
             type="text" 
-            defaultValue= {educator.name}
-            placeholder= "Enter Educator Name"
+            defaultValue= {student.name}
+            placeholder= "Enter Student Name"
             name= "name"
             onChange= {handleChange}
             />
@@ -62,7 +61,7 @@ const UpdateEducator = ({ id, onEditEducator}) => {
         </div>
         
         <div className="row mb-3">               
-          <label className="col-sm-2">Educator Email:</label>
+          <label className="col-sm-2">Student Email:</label>
           <div className="col-sm-10">
             <input 
               style={{
@@ -76,8 +75,8 @@ const UpdateEducator = ({ id, onEditEducator}) => {
                 boxSizing: "border-box",
                 fontSize: "14px"}}
                 type="text" 
-                defaultValue={educator.email}
-                placeholder="Enter Educator Email"
+                defaultValue={student.email}
+                placeholder="Enter Student Email"
                 name="email"
                 onChange={handleChange}
             />
@@ -85,7 +84,7 @@ const UpdateEducator = ({ id, onEditEducator}) => {
          </div>
 
          <div className="row mb-3">               
-            <label className="col-sm-2">Educator Password:</label>
+            <label className="col-sm-2">Student Password:</label>
             <div className="col-sm-10">
               <input 
               style={{
@@ -99,20 +98,15 @@ const UpdateEducator = ({ id, onEditEducator}) => {
               boxSizing: "border-box",
               fontSize: "14px"}}
               type="password" 
-              defaultValue={educator.password}
-              placeholder="Enter Educator Password"
+              defaultValue={student.password}
+              placeholder="Enter Student Password"
               name="password"
               onChange={handleChange}
-              // required
+        //       required
               pattern=".{8,}"
             />
           </div>
-         </div>
-        {/* <textarea
-          name="comment"
-          defaultValue={content}
-          onChange={(e) => setContent(e.target.value)}
-        /> */}
+         </div>        
         <input type="submit" value="Save change" />
       </form>
 
@@ -121,4 +115,4 @@ const UpdateEducator = ({ id, onEditEducator}) => {
   );
 }
 
-export default UpdateEducator
+export default UpdateStudents
