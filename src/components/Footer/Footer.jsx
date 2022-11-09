@@ -56,7 +56,7 @@ const Footer = () => {
         <Row>
           <Col lg="3" md="6" className="mb-4">
             <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-pantone-line"></i> E-Maso   vm
+              <i className="ri-pantone-line"></i> E-Maso   vm
             </h2>
 
             <div className="follows">
@@ -64,21 +64,21 @@ const Footer = () => {
               <span>
                 {" "}
                 <a href="facebook.com">
-                  <i class="ri-facebook-line"></i>
+                  <i className="ri-facebook-line"></i>
                 </a>
               </span>
 
               <span>
                 {" "}
                 <a href="facebook.com">
-                  <i class="ri-instagram-line"></i>
+                  <i className="ri-instagram-line"></i>
                 </a>
               </span>
 
               <span>
                 {" "}
                 <a href="facebook.com">
-                  <i class="ri-linkedin-line"></i>
+                  <i className="ri-linkedin-line"></i>
                 </a>
               </span>
 
@@ -88,7 +88,7 @@ const Footer = () => {
 
                   
                   
-                  <i class="ri-twitter-line"></i>
+                  <i className="ri-twitter-line"></i>
                 </a>
               </span>
             </div>

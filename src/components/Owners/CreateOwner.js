@@ -32,13 +32,13 @@ export default function CreateOwner(){
                 r.json().then((err) => setErrors(err.errors))
             }
         })
-        .then((data) => {
-                      // save the token to localStorage for future access
-                      localStorage.setItem("jwt", data.jwt);
-                      // save the owner somewhere (in state!) to log the owner in
-                      console.log(setOwner(data.owner));
-                      //console.log(data.owner)
-        })        
+        // .then((data) => {
+        //               // save the token to localStorage for future access
+        //               localStorage.setItem("jwt", data.jwt);
+        //               // save the owner somewhere (in state!) to log the owner in
+        //               console.log(setOwner(data.owner));
+        //               //console.log(data.owner)
+        // })        
     }
     const errorMessage = (errors.map((error, index)=>(
         <ul>

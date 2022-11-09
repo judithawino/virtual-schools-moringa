@@ -19,7 +19,7 @@ const navLinks = [
   },
   {
     display: "Enroll",
-    url: "/login",
+    url: "/admin/login",
   },
 ];
 
@@ -34,7 +34,7 @@ const Header = () => {
         <div className="navigation d-flex align-items-center justify-content-between">
           <div className="logo">
             <h2 className=" d-flex align-items-center gap-1">
-              <i class="ri-pantone-line"></i> E-Masomo.
+              <i className="ri-pantone-line"></i> E-Masomo.
             </h2>
           </div>
 
@@ -54,7 +54,7 @@ const Header = () => {
 
           <div className="mobile__menu">
             <span>
-              <i class="ri-menu-line" onClick={menuToggle}></i>
+              <i className="ri-menu-line" onClick={menuToggle}></i>
             </span>
           </div>
         </div>

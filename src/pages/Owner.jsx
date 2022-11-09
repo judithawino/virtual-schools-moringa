@@ -1,8 +1,9 @@
-import CourseList from "../components/Owners/CourseList";
-import Educator from "../components/Owners/Educators";
+// import CourseList from "../components/Owners/CourseList";
+
 import NavbarComp from "../components/Owners/NavbarComp";
-import School from "../components/Owners/Schools";
-import Student from "../components/Owners/Students";
+import Educator from "../components/Owners/Educators/Educators";
+// import School from "../components/Owners/Schools";
+// import Student from "../components/Owners/Students";
 
 
 
@@ -11,9 +12,10 @@ const Owner = () => {
     <>
     <NavbarComp/>
     <Educator/>
+    {/* <Educator/>
     <Student/>
     <School/>
-    <CourseList/>
+    <CourseList/> */}
     </>
   )
   };

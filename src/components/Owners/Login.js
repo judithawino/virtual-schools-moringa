@@ -6,11 +6,7 @@ export default function Login(){
             email: "",
             password: "",            
           })
-    const [error, setError] = useState("");
-    // const [token, setToken] = useState("")
-    // useEffect((() => {
-    //   setToken(localStorage.getItem("jwt"))
-    // }), [])
+    const [error, setError] = useState("");    
     const navigate = useNavigate();
     function handleChange(e) {
             setOwnerLogin({ ...ownerLogin, [e.target.name]: e.target.value });
@@ -27,22 +23,15 @@ export default function Login(){
                 },
             body: JSON.stringify(ownerLogin) 
         })
-        .then((r) => {
-            if (r.ok) {
-                navigate("/admin") 
-            } else {
-                r.json().then((err) => (setError(err.message)))
-            }
+        .then((res)=>{
+          if (res.ok) {
+            res.json().then((res)=> {
+            localStorage.setItem("jwt", JSON.stringify(res))})
+            navigate("/admin")
+          } else {
+            res.json().then((err) => (setError(err.message)))
+          }
         })
-        .then((data) => {
-          // "jwt", JSON.stringify(newUser.jwt)
-                      // save the token to localStorage for future access
-                      localStorage.setItem("jwt", JSON.stringify(ownerLogin.jwt))
-                      // localStorage.setItem("jwt", data.jwt);
-                      // save the owner somewhere (in state!) to log the owner in
-                      setOwnerLogin(data.ownerLogin);
-                      //console.log(data.owner)newUser
-        })        
     }
     return (
         <div className="Auth-form-container">            
@@ -83,7 +72,8 @@ export default function Login(){
                 <button type="submit" className="btn btn-info">
                   Log in
                 </button>
-              </div>                 
+              </div>
+                               
             </div>
           </form>
         </div>

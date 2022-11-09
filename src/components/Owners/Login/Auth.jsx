@@ -1,6 +1,8 @@
 import React, { useState, } from "react"
-import CreateOwner from "../Owners/CreateOwner"
-import Login from "../Owners/Login"
+import CreateOwner from "../CreateOwner";
+import Login from "../Login";
+// import CreateOwner from "../Owners/CreateOwner"
+// import Login from "../Owners/Login"
 import './Auth.css';
 
  function Auth (props) {
@@ -14,21 +16,21 @@ import './Auth.css';
     return (
       <div className="Auth-form-container">
          <Login/>
+         <div className="text-center">
          <p>
-              <div className="text-center">
               Dont have an account yet?{" "} <br/>
               <span className="link-primary" onClick={changeAuthMode}>
                 Sign Up 
               </span> here
-              </div> 
-              </p>    
-          
-        
+               
+          </p>
+          </div>        
       </div>
     )
   }
   return (
     <div className="Auth-form-container">
+      {/* <CreateOwner/> */}
       <CreateOwner/>
       <p>
           <div className="text-center">

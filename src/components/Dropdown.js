@@ -3,12 +3,12 @@ import './Dropdown.css'
 function Drop() {
   return (
     // <div class="navbar">
-      <div class="dropdown">
-        <button class="dropbtn">
+      <div className="dropdown">
+        <button className="dropbtn">
           enroll
-          <i class="fa fa-caret-down"></i>
+          <i className="fa fa-caret-down"></i>
         </button>
-        <div class="dropdown-content">
+        <div className="dropdown-content">
           {/* <a href="/login">Owner</a> */}
           <a href="/stulogin">Educator</a>
           <a href="/loginedu">Student</a>
