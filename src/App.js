@@ -45,6 +45,7 @@ function App() {
         <Route path="/admin/login" element={ <Auth/>}/>
         <Route path="/view/educator" element={<ViewEducator/> }/>
         <Route path="/create/educator" element={<CreateEducator/>} />
+        {/* <Route path="/update/educator" element={<UpdateEducator/>}/> */}
         {/* <Route path="/learn" element={<Learn/>} />
         <Route path="/stulogin" element={<LoginEducator/>} />
         <Route path="/loginedu" element={<StudentLogin/>} />

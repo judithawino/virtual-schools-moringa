@@ -14,15 +14,21 @@ export default function ViewEducator (){
         .then((data)=> {setEducatorList(data)})
     } 
     useEffect(handleGetRequest)
-    function handleDelete(deletedEducator) {
-        const newEducatorList=educatorList.filter((educator)=>
-        educator.id!==deletedEducator.id);
-        setEducatorList(newEducatorList);
-    }  
+
+    function onDeleteEducator(deletedEducator){
+      let afterDelete = educatorList.filter((educator) => educator.id !== deletedEducator)
+      setEducatorList(afterDelete)
+    }
+  
+    // function handleDelete(deletedEducator) {
+    //     const newEducatorList=educatorList.filter((educator)=>
+    //     educator.id!==deletedEducator.id);
+    //     setEducatorList(newEducatorList);
+    // }  
     return(
         <div>
             <h1> Eductors Lists</h1> 
-            <EducatorMain educatorInfo={educatorList} onDelete={handleDelete}/>
+            <EducatorMain educatorInfo={educatorList} onDeleteEducator={onDeleteEducator}/>
             {/* { educatorList.map((educators)=>(
                <table  className="table table-primary" key = {educators.id}>
                <thead>

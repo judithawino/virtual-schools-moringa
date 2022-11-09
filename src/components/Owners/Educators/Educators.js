@@ -10,8 +10,8 @@ function Educator() {
         <Card.Title>Educator</Card.Title>
         <Card.Link href="/view/educator" variant="primary">View</Card.Link>
         <Card.Link href="/create/educator" variant="primary">Create</Card.Link>
-        <Card.Link href="/update/educator" variant="primary" >Update</Card.Link>
-        <Card.Link href="/delete/educator" variant="primary" >Delete</Card.Link>
+        {/* <Card.Link href="/update/educator" variant="primary" >Update</Card.Link>
+        <Card.Link href="/delete/educator" variant="primary" >Delete</Card.Link> */}
       </Card.Body>
     </Card>
     </div>
