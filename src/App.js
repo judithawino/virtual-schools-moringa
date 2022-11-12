@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Owner from "./pages/Owner";
 import Auth from "./components/Owners/Login/Auth";
+import ViewSchools from "./components/Owners/Schools/ViewSchools";
+import CreateSchools from "./components/Owners/Schools/CreateSchools";
 import CreateEducator from "./components/Owners/Educators/CreateEducators";
 import ViewEducator from "./components/Owners/Educators/ViewEducator";
 import ViewStudents from "./components/Owners/Students/ViewStudents";
@@ -45,6 +47,8 @@ function App() {
         <Route path="/" element={<Home/> } />
         <Route path="/admin" element={< Owner/> } />
         <Route path="/admin/login" element={ <Auth/>}/>
+        <Route path="/view/school" element={ < ViewSchools/>} />
+        <Route path="/create/school" element={ < CreateSchools/>} />
         <Route path="/view/educator" element={<ViewEducator/> }/>
         <Route path="/create/educator" element={<CreateEducator/>} />
         <Route path="/view/students" element={<ViewStudents/> }/>
