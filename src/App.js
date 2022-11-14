@@ -12,6 +12,8 @@ import ViewStudents from "./components/Owners/Students/ViewStudents";
 import CreateStudents from "./components/Owners/Students/CreateStudents";
 import ViewCourses from "./components/Owners/Courses/ViewCourse";
 import CreateCourses from "./components/Owners/Courses/CreateCourses";
+import ViewExams from "./components/Owners/Exams/ViewExam";
+import CreateExams from "./components/Owners/Exams/CreateExams";
 // import Auth from "./components/Login/Auth";
 
 // import AboutUs from "./components/About-us/AboutUs";
@@ -57,6 +59,8 @@ function App() {
         <Route path="/create/students" element={<CreateStudents/> }/>
         <Route path="/view/course" element={ < ViewCourses/>} />
         <Route path="/create/course" element={ < CreateCourses/>} />
+        <Route path="/view/exam" element={ < ViewExams/>} />
+        <Route path="/create/exam" element={ < CreateExams/>} />
         {/* <Route path="/update/educator" element={<UpdateEducator/>}/> */}
         {/* <Route path="/learn" element={<Learn/>} />
         <Route path="/stulogin" element={<LoginEducator/>} />
